@@ -39,6 +39,24 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <section id="histogram-container">
+        <h3>Pixel-Intensity Histogram</h3>
+        <form id="histogram-form">
+          <div class="form-group">
+            <label for="pixel-values">Grayscale pixel intensities:</label>
+            <p id="pixel-help">Enter whole numbers from 0 (black) to 255 (white), separated by commas or whitespace. Maximum 65,536 pixels. Each number represents one pixel; unused cells in the preview are not counted.</p>
+            <textarea id="pixel-values" rows="4" maxlength="262143" required aria-describedby="pixel-help">0, 32, 64, 96, 128, 160, 192, 255</textarea>
+          </div>
+          <button type="submit">Calculate Histogram</button>
+        </form>
+        <p id="histogram-error" class="message error hidden" role="alert"></p>
+        <h4>Pixel canvas</h4>
+        <canvas id="pixel-canvas" width="256" height="256" role="img" aria-label="Grayscale pixels from the input">Grayscale pixel preview.</canvas>
+        <h4>Intensity frequency</h4>
+        <canvas id="histogram-chart" width="640" height="300" role="img" aria-label="Histogram of grayscale pixel intensities">Frequency of each intensity from 0 to 255.</canvas>
+        <p id="histogram-summary" role="status"></p>
+      </section>
     </main>
 
     <footer>
@@ -46,5 +64,6 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="histogram.js"></script>
   </body>
 </html>
