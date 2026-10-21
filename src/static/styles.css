@@ -93,6 +93,38 @@ section h3 {
   font-size: 16px;
 }
 
+#histogram-container {
+  max-width: 1030px;
+}
+
+#pixel-values {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#histogram-container h4 {
+  margin-top: 20px;
+}
+
+#pixel-canvas {
+  display: block;
+  width: 256px;
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  border: 1px solid #ddd;
+}
+
+#histogram-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 button {
   background-color: #1a237e;
   color: white;
